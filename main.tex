@@ -1,0 +1,141 @@
+\documentclass[11pt,a4paper]{scrartcl}
+ \usepackage[backend=bibtex,style=numeric, sorting=none,defernums=true]{biblatex}
+\bibliography{references}
+\DeclareBibliographyCategory{pat}
+\DeclareBibliographyCategory{groupA}
+\DeclareBibliographyCategory{groupB}
+\defbibheading{empty}
+
+%In case we want to use a sans serif font (see 54_012)
+\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{anysize} \marginsize{18mm}{18mm}{2mm}{7mm} % Right, left, top, bottom
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage[table]{xcolor}
+\newcommand{\tabitem}{-~~}%{\textbullet}
+\usepackage{calc, fp}
+\usepackage[group-separator={,}]{siunitx}
+\sisetup{detect-weight=true, detect-family=true}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usepackage{float}
+\usepackage{units}
+\usepackage{ifpdf}
+\usepackage[caption=false,font=footnotesize]{subfig}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{eurosym}
+\usepackage{todonotes} 
+\usepackage{gensymb}
+
+\newcommand{\GroupAlg}{Institute of Science}
+\newcommand{\GroupA}{IoS}
+\newcommand{\GroupAUniversity}{Universit\"at Hamburg} 
+\newcommand{\GroupAProf}{Prof.\ Science}
+\newcommand{\GroupAEmployment}{Full Professor (W3)}
+
+\newcommand{\GroupBlg}{Institute of Research}
+\newcommand{\GroupB}{IoR}
+\newcommand{\GroupBUniversity}{Universit\"at München} 
+\newcommand{\GroupBProf}{Prof.\ Research}
+\newcommand{\GroupBEmployment}{Full Professor (W2)}
+
+\newcommand{\proposalTitle}{Reasearch Proposal}
+
+\newcommand\Fig[1]{{Fig}.~\ref{#1}}
+\newcommand\fig[1]{{Fig}.~\ref{#1}}
+\newcommand\Tab[1]{{Tab}.~\ref{#1}}
+\newcommand\tab[1]{{tab}.~\ref{#1}}
+\newcommand\Equ[1]{{Eq}.~(\ref{#1})}
+\newcommand\equ[1]{{eq}.~(\ref{#1})}
+
+\long\def\desc#1{}
+
+\def\WPDesc[#1]#2#3#4#5#6{\vspace{5mm} \hspace{-2mm}  \begin{tabular}{p{1.4cm}|p{2.5cm}|p{12.2cm}|} \hline \rowcolor[gray]{0.9}
+		\multicolumn{1}{|l}{\textbf{#1}} & \multicolumn{2}{|l|}{\textbf{ #2 }} \\
+		\hline
+		& Partners [pm]   & #3 \\
+		\cline{2-3}  & Dependencies    & #4 \\
+		\cline{2-3}  & Results, Tasks  & #6 \\
+		\cline{2-3}  & Start - End     & #5 \\
+		\cline{2-3}
+	\end{tabular}
+}
+
+\newcommand{\WPDescStyle}[6]{
+	\vspace{4pt}
+	\noindent
+	\begin{tabular}{p{2.4cm}|p{4.4cm}p{2.4cm}|p{6.5cm}} %{p{2.4cm}|p{14.2cm}} 
+		\multicolumn{1}{l}{\textit{#1}} & \multicolumn{3}{l}{\textit{#2}} \\
+		\hline
+		\cellcolor[gray]{0.9}Partners [pm]   &\cellcolor[gray]{0.9}\small #3 & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} \small #5\\
+		
+		\cellcolor[gray]{0.9}Dependencies    & \cellcolor[gray]{0.9}\small #4 &\cellcolor[gray]{0.9}&\cellcolor[gray]{0.9} \\
+		%\cellcolor[gray]{0.9}Dependencies    & \multicolumn{3}{l}{\cellcolor[gray]{0.9}\small #4} \\
+		\hline
+		%\cellcolor[gray]{0.9} Results  &  \multicolumn{3}{p{14.2cm}}{\cellcolor[gray]{0.9} {\raggedright \small #6}} \\ %\hline
+%		Start - End     & \small #5 \\                \hline
+	\end{tabular}
+	\vspace{2.6pt}
+}
+
+\begin{document}
+\input{00_front_dfg.tex}
+
+\setcounter{page}{1}
+\vspace{6pt}
+
+\input{10_state_of_the_art.tex}
+\input{11_prelim_work.tex}
+\input{11_Project_related_publications}
+\input{20_goals.tex}
+\input{21_work.tex}
+
+\subsection{Data handling}
+No special measures are required beside the usual DFG guidelines for good scientific practice.
+
+\subsection{Other information}
+Not applicable.
+
+\vspace{-2mm}
+\subsection{Descriptions of proposed investigations involving experiments on humans, human materials or animals}
+%\subsection{Explanations on the proposed investigations}
+Not applicable.
+
+\vspace{-2mm}
+\subsection{Information on scientific and financial involvement of international cooperation partners}
+Not applicable.
+
+\vspace{-2mm}
+\section{Bibliography}
+
+\begingroup
+\renewcommand*{\bibfont}{\footnotesize}
+%\setstretch{0.8}
+\setlength\bibitemsep{0pt}
+\sloppy
+\printbibliography[heading=empty,notcategory=groupA,notcategory=groupB, notcategory=pat] %,maxbibnames=3
+\endgroup
+
+\vspace{-2mm}
+\input{40_funds.tex}
+
+\section{Project requirements}
+\input{51_group.tex}
+\input{52_cooperation.tex}
+\input{53_equipement.tex}
+
+\subsection{Project-relevant interests in commercial enterprises}
+Not applicable.
+
+\subsection{Project-relevant participation in commercial enterprises}
+Not applicable.
+
+\section{Additional information}
+Not applicable.
+
+\end{document}

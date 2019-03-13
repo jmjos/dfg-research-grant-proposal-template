@@ -1,0 +1,43 @@
+\subsection{Project-related publications}
+
+\subsubsection*{Peer-reviewed articles, books, and journals}
+
+\defbibenvironment{bibliography}
+{\list
+	{\printtext[labelnumberwidth]{%
+			\printfield{prefixnumber}%
+			\printfield{labelnumber}}}
+	{\setlength{\labelwidth}{\labelnumberwidth}%
+		\setlength{\leftmargin}{\labelwidth}%
+		\setlength{\labelsep}{\biblabelsep}%
+		%      \addtolength{\leftmargin}{\labelsep}%
+		\addtolength{\leftmargin}{6pt}% <-- changed
+		\setlength{\itemsep}{\bibitemsep}%
+		\setlength{\parsep}{\bibparsep}}%
+	\renewcommand*{\makelabel}[1]{\hss##1}}
+{\endlist}
+{\item}
+
+\setlength{\bibitemsep}{0pt}
+\setlength{\bibhang}{0pt}
+
+\addtocategory{groupA}{JOSEPH201736}
+\addtocategory{groupB}{7961256}
+\addtocategory{pat}{e2009circuits}
+
+
+\nocite{JOSEPH201736, 7961256, e2009circuits}
+
+\renewcommand*{\bibfont}{\footnotesize}
+
+\printbibliography[category=groupA,heading=empty]
+\vspace{-\baselineskip}
+\printbibliography[category=groupB,heading=empty] %,maxbibnames=2]
+
+
+
+\subsubsection*{Patents}
+\printbibliography[category=pat,heading=empty]
+
+
+

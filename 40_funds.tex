@@ -1,0 +1,184 @@
+\FPset \Months{36}
+\FPset \Years{3}
+
+\FPset \GroupAbaSalery{472.40} 
+\FPset \GroupAmaSalery{472.40} 
+\FPset \GroupBbaSalery{505.56} 
+\FPset \GroupBmaSalery{687.72} 
+
+\FPset \wiMASalery{66400} %http://www.dfg.de/formulare/60_12/60_12_de.pdf
+
+\FPmul \itemWiMASalery \Years \wiMASalery
+\FPmul \iiktWiMASalery \Years \wiMASalery
+\FPadd \totalWiMASalery \itemWiMASalery \iiktWiMASalery
+\FPround \itemWiMASalery \itemWiMASalery {0}
+\FPround \iiktWiMASalery \iiktWiMASalery {0}
+\FPround \totalWiMASalery \totalWiMASalery {0}
+
+\FPmul \GroupAbaSaleryTotal \Months \GroupAbaSalery
+\FPmul \GroupAmaSaleryTotal \Months \GroupAmaSalery
+\FPmul \GroupBbaSaleryTotal \Months \GroupBbaSalery
+\FPmul \GroupBmaSaleryTotal \Months \GroupBmaSalery
+
+\FPadd \HiWiTotalSalery {0} \GroupAbaSaleryTotal
+\FPadd \HiWiTotalSalery \HiWiTotalSalery \GroupAmaSaleryTotal
+\FPadd \HiWiTotalSalery \HiWiTotalSalery \GroupBmaSaleryTotal
+
+\FPadd \HiWiGroupATotalSalery \GroupAbaSaleryTotal \GroupAmaSaleryTotal
+\FPadd \HiWiGroupBTotalSalery \GroupBbaSaleryTotal \GroupBmaSaleryTotal
+
+\FPround \HiWiGroupATotalSalery \HiWiGroupATotalSalery {2}
+\FPround \HiWiGroupBTotalSalery \HiWiGroupBTotalSalery {2}
+
+\FPround \HiWiTotalSalery \HiWiTotalSalery {2}
+
+\FPround \GroupAbaSaleryTotal \GroupAbaSaleryTotal {2}
+\FPround \GroupAmaSaleryTotal \GroupAmaSaleryTotal {2}
+\FPround \GroupBbaSaleryTotal \GroupBbaSaleryTotal {2}
+\FPround \GroupBmaSaleryTotal \GroupBmaSaleryTotal {2}
+
+\FPadd \totalSalery \HiWiTotalSalery \totalWiMASalery
+\FPround \totalSalery \totalSalery {0}
+
+
+
+
+\section{Requested modules/funds}
+We are applying for the "Basic Module" in the research grants programme. 
+
+\subsection{Funding for staff}
+\subsubsection{Research staff}
+
+\paragraph{Postdoctoral researcher or comparable}
+
+\noindent Not applicable.
+
+\paragraph{Doctoral researcher or comparable}
+
+\noindent We apply for \textbf{a total amount of \euro \num[group-separator={,}]{\totalSalery}}.
+
+For \GroupAProf\ (\GroupAlg--\GroupA) and \GroupBProf\ (\GroupBlg--\GroupB) we
+apply for \euro \num[group-separator={,}]{\itemWiMASalery} each for \Months months of funding for one doctoral
+researcher. The researchers will work 100\% of the standard work week
+on the project and conduct the research. Employing a researcher in
+wage group TVL E-13 for one year costs \euro \num[group-separator={,}]{\totalWiMASalery}.
+
+\vspace{6pt}
+\noindent\begin{tabular}{lrrrr}
+\bfseries Position && \bfseries Amount &\bfseries Factor &\bfseries Subtotal \\\hline
+Doctoral researcher at \GroupA & TVL E-13 per year & \euro \num[group-separator={,}]{\wiMASalery} & \Years & \euro \num[group-separator={,}]{\itemWiMASalery}\\
+Doctoral researcher at \GroupB & TVL E-13 per year & \euro \num[group-separator={,}]{\wiMASalery} & \Years & \euro \num[group-separator={,}]{\iiktWiMASalery}
+\\\cline{5-5}
+\bfseries Total & && &  \bfseries \euro \num[group-separator={,}]{\totalWiMASalery}\\
+\end{tabular}
+\vspace{6pt}
+
+\paragraph{Other research assistant}
+
+\noindent Not applicable.
+
+\subsubsection{Non-academic staff member}
+
+\noindent Not applicable.
+
+\subsubsection{Miscellaneous staff}
+
+\paragraph{Support staff (research support staff and student assistants)}
+
+
+\noindent We apply for a {\bfseries total amount of \euro \num[group-separator={,}]{\HiWiTotalSalery}} for support staff.
+
+
+For \GroupAProf~(\GroupA) we apply for funding of two student assistants to support the academic staff with implementation, simulation, and evaluation with the amount of \euro \num[group-separator={,}]{\HiWiGroupATotalSalery}. Each assistant will work 40 hours per month during the duration of the project. The pre-tax wage at \GroupA\ is \euro \num[group-separator={,}]{\GroupAbaSalery} independent of the students degree. 
+
+For \GroupBProf~(\GroupB) we also apply for funding of two student assistants with the amount of \euro \num[group-separator={,}]{\HiWiGroupBTotalSalery}. The pre-tax wage at \GroupB\ is \euro \num[group-separator={,}]{\GroupBbaSalery} for bachelor students per month and \euro \num[group-separator={,}]{\GroupBmaSalery} a for master student.
+
+\vspace{6pt}
+\noindent\begin{tabular}{lrrr}
+\bfseries Position & \bfseries Amount &\bfseries Factor &\bfseries Subtotal \\\hline
+Bachelor student at \GroupA, 40 hours & \euro \GroupAbaSalery & \Months & \euro \num[group-separator={,}]{\GroupAbaSaleryTotal}\\
+Master student at \GroupA, 40 hours & \euro \GroupAmaSalery & \Months & \euro \num[group-separator={,}]{\GroupAmaSaleryTotal}\\
+Bachelor student at \GroupB, 40 hours & \euro \GroupBbaSalery & \Months & \euro\num[group-separator={,}]{\GroupBbaSaleryTotal}\\
+Master student at \GroupB, 40 hours & \euro \GroupBmaSalery & \Months & \euro \num[group-separator={,}]{\GroupBmaSaleryTotal}\\
+\bfseries Total & & &  \bfseries \euro \num[group-separator={,}]{\HiWiTotalSalery}\\
+\end{tabular}
+\vspace{6pt}
+
+\paragraph{Other staff}
+\noindent Not applicable.
+
+\subsection{Funding for direct project costs}
+\subsubsection{Equipment up to \euro10,000, software and consumables}
+
+\noindent We apply for a {\bfseries total amount of \euro 16,500} for equipment. 
+
+We apply for the amount of \euro 5,500 for each of the groups
+(\GroupAProf and \GroupBProf ) for a "Xilinx
+Virtex UltraScale FPGA VCU108 Evaluation Kit".  An state-of-the-art
+FPGA board is required for prototyping. After finishing this project the
+prototyping boards can also be used for other research activities.
+
+\subsubsection{Travel}
+
+\noindent We apply for a {\bfseries total amount of \euro 20,000} for travel expenses. 
+
+We apply for funding of the expenses for conference travels to the amount of \euro 8,000 for \GroupAProf~(\GroupA) for two European and two International conferences; we apply for funding of the expenses for conference travels to the amount of \euro 8,000 for \GroupBProf~(\GroupB) for two European and two International conferences:
+
+\vspace{6pt}
+\noindent\begin{tabular}{lrrr}
+\bfseries Position & \bfseries Amount &\bfseries Factor &\bfseries Subtotal \\\hline
+European conference (\GroupA) & \euro 1,500 & 2 & \euro 3,000\\
+International conference (\GroupA) & \euro 2,500 & 2 & \euro 5,000\\
+European conference (\GroupB) & \euro 1,500 & 2 & \euro 3,000\\
+International conference (\GroupB) & \euro 2,500 & 2 & \euro 5,000\\   
+\bfseries Total & & &  \bfseries \euro 20,000\\
+\end{tabular}
+\vspace{6pt}
+
+\noindent In addition, for cooperation within this project we apply
+for \euro 4,210 for \GroupAProf\ (\GroupA) , \euro 4,210 for
+\GroupBProf~(\GroupB). There are five
+joined work packages (WP 5.1, WP 5.2, WP 5.3, WP 7.3, WP 7.4) and five
+work packages requiring close cooperation (WP 1.3, WP 2.3, WP 3, WP 4,
+WP 7.2). Therefore we ask for the travel expenses for 10 meetings, in
+which two persons are visiting the project partner.
+We assume a duration of half a work week per meeting (2 nights). Thus,
+per person and trip two railway tickets, two nights at a hotel, and
+three daily allowances are required, which amounts to:
+
+\vspace{6pt}
+\noindent\begin{tabular}{lrrr}
+\bfseries Position & \bfseries Amount &\bfseries Factor &\bfseries Subtotal \\\hline
+Railway ticket, single trip per person & \euro 65.00 & 40=10*2*2 & \euro 2,600\\
+Accommodation per night and person & \euro 80.00 & 40=10*2*2 & \euro 3,200\\
+Daily allowance & \euro 24.00 & 60=10*3*2 & \euro 1,440 \\\cline{4-4}
+\bfseries Total & & &  \bfseries \euro 8,240\\
+\end{tabular}
+\vspace{6pt}
+
+
+\subsubsection{Visiting researchers}
+
+\noindent Not applicable.
+
+\subsubsection{Experimental animals}
+
+\noindent Not applicable.
+
+\subsubsection{Other}
+
+\noindent Not applicable.
+
+\subsubsection{Project-related publication expenses}
+\noindent At least four open-access journal publications are expected. This requires additional fees for handling
+and open access services of about 1,500 EUR. Our universities employ
+an open access strategy already. However, researchers are encouraged
+to acquire additional funding for open access publishing. Therefore We
+apply for a {\bfseries total amount of \euro 1,500} to pay fees of
+journal publications. For \GroupAProf~(\GroupA) we apply for \euro 750 and
+for \GroupBProf~(\GroupB) we apply for \euro 750 as well.
+
+\subsection{Funding for instrumentation}
+
+\noindent Not applicable.
+
